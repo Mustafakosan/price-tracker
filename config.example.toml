@@ -1,0 +1,41 @@
+# Copy this file to config.toml and edit it.
+#   Windows:      copy config.example.toml config.toml
+#   macOS/Linux:  cp config.example.toml config.toml
+#
+# Telegram secrets are NOT stored here. Put them in a .env file (see .env.example).
+
+# Where price history and the Excel report are written (relative to this file).
+database = "data/prices.db"
+report = "reports/price_report.xlsx"
+
+[alerts]
+# Only alert when a price moves by at least this many percent (0 = any change).
+min_change_percent = 1
+
+[scraping]
+delay_seconds = 2        # wait between requests - be polite to the site
+respect_robots = true    # skip pages that robots.txt disallows
+
+# Each product needs a unique name, the page URL and a CSS selector for the price.
+# Tip: in Chrome, right-click the price -> Inspect -> right-click the element ->
+#      Copy -> Copy selector. Shorter, class-based selectors survive redesigns better.
+#
+# The examples below use books.toscrape.com, a site built for scraping practice.
+
+[[products]]
+name = "A Light in the Attic"
+url = "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
+selector = ".product_main .price_color"
+currency = "GBP"
+
+[[products]]
+name = "Tipping the Velvet"
+url = "https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html"
+selector = ".product_main .price_color"
+currency = "GBP"
+
+[[products]]
+name = "Soumission"
+url = "https://books.toscrape.com/catalogue/soumission_998/index.html"
+selector = ".product_main .price_color"
+currency = "GBP"
