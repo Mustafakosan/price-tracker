@@ -6,6 +6,10 @@ Monitor product prices on any e-commerce site, keep a price history, get a colou
 
 *Green: price dropped. Red: price went up. A second sheet keeps the full history.*
 
+> **Not a coder?** The free code below is everything you need. If you'd rather skip the setup, there is a
+> [ready-to-run kit on Gumroad](https://mustafakosan.gumroad.com/l/price-tracker-bot) ($15, by the author of this repo)
+> with one-click Windows scripts and an 8-page PDF setup guide. Buying it is optional and supports the project.
+
 ## Features
 
 - **Works with most shops**: you give a URL and a CSS selector, the bot reads the price
